@@ -7,9 +7,7 @@ const R = require('ramda');
 const sizeOf = require('image-size');
 const pathinit = './random_pic/';
 const FileName = [];
-const object = {
-  imageInfo: []
-};
+const object = require('./image_information');
 
 const checkifjpg = (x) => x.slice(-4) === '.jpg';
 
@@ -47,15 +45,15 @@ const main = async () => {
   const classname = getclass(predictions);
   const dimension = getbbox(predictions);
 
-  const ziplistclass = R.zip(FileNameFilter, classname);
-  createandmove(ziplistclass);
-  
   const ziplistdim = R.zip(FileNameFilter, dimension);
   addinginJSON(ziplistdim);
+
+  const ziplistclass = R.zip(FileNameFilter, classname);
+  createandmove(ziplistclass);
 };
 
 const doaddinginJSON = ([x, [a, b, c, d]]) => {
-  object.imageInfo.push({
+  const stuff = {
     OldName: x,
     NewName: '',
     OriginalDim: `${sizeOf(x).width} x ${sizeOf(x).width}`,
@@ -63,9 +61,10 @@ const doaddinginJSON = ([x, [a, b, c, d]]) => {
     ratio:
       (Math.round(a + c) * Math.round(b + d)) /
       (sizeOf(x).width * sizeOf(x).width)
-  });
+  };
+  object.push(stuff);
   fs.writeFile(
-    'image_information.json',
+    './image_information.json',
     JSON.stringify(object, null, '\t'),
     'utf8'
   );

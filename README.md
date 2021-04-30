@@ -1,6 +1,6 @@
 # Project-JS-Image
 
-This is an image sort algorithm... Obviously.
+This is an image sort algorithm.
 
 ## Description
 
@@ -25,4 +25,4 @@ yarn install
 
 
 ## Contributing
-Me and AgnesBnr
+Me and M3canixx

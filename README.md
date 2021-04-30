@@ -1,6 +1,6 @@
 # Project-JS-Image
 
-This is an image sort algorithm... Obviously.
+This is an image sort algorithm.
 
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/xojs/xo)
 
@@ -27,4 +27,4 @@ yarn install
 
 
 ## Contributing
-Me and AgnesBnr
+Me and M3canixx

@@ -1,0 +1,44 @@
+{
+  "name": "project-js-image",
+  "version": "1.0.0",
+  "description": "This is an image sort algorithm... Obviously.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tensorflow-models/coco-ssd": "^2.2.2",
+    "@tensorflow/tfjs-converter": "^3.5.0",
+    "@tensorflow/tfjs-core": "^3.5.0",
+    "@tensorflow/tfjs-node-gpu": "^3.5.0",
+    "bluebird": "^3.7.2",
+    "fs-extra": "^9.1.0",
+    "image-size": "^1.0.0",
+    "jpeg-js": "^0.4.3",
+    "nedb": "^1.8.0",
+    "python3": "^0.0.1",
+    "seedrandom": "~2.4.3",
+    "webpack": "^5.36.1",
+    "xo": "^0.39.1",
+    "yarn": "^1.22.10"
+  },
+  "xo": {
+    "space": 2,
+    "prettier": true,
+    "rules": {
+      "unicorn/no-fn-reference-in-iterator": 0,
+      "unicorn/no-array-callback-reference": 0,
+      "unicorn/no-reduce": 0
+    },
+    "envs": [
+      "mocha"
+    ]
+  },
+  "prettier": {
+    "bracketSpacing": false,
+    "singleQuote": true,
+    "trailingComma": "none"
+  }
+}

@@ -1,4 +1,4 @@
-# Project-JS-Image
+# Image-Sort-Algorithm
 
 This is an image sort algorithm.
 
